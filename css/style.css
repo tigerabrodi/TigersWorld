@@ -1,0 +1,838 @@
+* {
+    outline: none;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to right, rgba(148, 99, 39, 0.712), rgba(22, 61, 98, 0.397), rgba(122, 22, 22, 0.582), rgba(172, 102, 38, 0.575), rgba(76, 104, 16, 0.637));
+}
+
+
+/* Navigation Bar */
+
+
+
+.navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.navigation-list {
+    display: flex;
+    flex: 1 1;
+    justify-content: space-around;
+    flex-direction: row;
+    list-style: none;
+}
+
+
+.navigation-link {
+    font-size: 2rem;
+    color: rgb(228, 190, 152);
+    text-decoration: none;
+    text-shadow: .1rem .1rem 1rem rgb(22, 21, 19);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    letter-spacing: .2rem;
+    transition: all .4s;
+}
+
+.navigation-link:hover {
+    border-radius: 4rem;
+    padding: 0 1.4rem;
+    box-shadow: .1rem .3rem 4rem rgb(255, 146, 146);
+    background: linear-gradient(to right bottom, rgba(151, 79, 61, 0.356), rgba(23, 56, 134, 0.424), rgba(91, 136, 33, 0.541));
+}
+
+
+/* header */
+
+.header {
+    background: linear-gradient(to right bottom, rgba(73, 13, 13, 0.774), rgba(14, 10, 2, 0.89), rgba(68, 88, 12, 0.609)), url(/img/tigerforheader.jpg);
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    bottom: 2rem;
+}
+
+.heading-title {
+    font-family: "indie flower", sans-serif;
+    font-size: 8rem;
+    position: absolute;
+    letter-spacing: .9rem;
+    font-weight: 700;
+    text-shadow: .1rem .3rem .6rem rgb(57, 78, 8);
+    top: 15%;
+    left: 33%;
+    text-transform: uppercase;
+    color: rgba(187, 128, 73, 0.753);
+}
+
+.heading-paragraph {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 3.5rem;
+    position: absolute;
+    letter-spacing: .4rem;
+    text-align: center;
+    font-weight: 600;
+    top: 35%;
+    text-shadow: .1rem .1rem .5rem rgba(112, 5, 5, 0.774);
+    padding: 0 40rem 0 50rem;
+    color: rgba(165, 77, 42, 0.787);
+    text-align-last: center;
+    box-shadow: .1rem .1rem .7rem rgb(0, 0, 0);
+    text-transform: lowercase;
+}
+
+.heading-button {
+    position: absolute;
+    top: 65%;
+    left: 48%;
+    border-radius: 1.9rem;
+    font-size: 1.4rem;
+    font-family: "montserrat", sans-serif;
+    padding: 1.4rem;
+    letter-spacing: .2rem;
+    text-shadow: .1rem .1rem .9rem rgb(240, 140, 74);
+    border: 0px solid;
+    font-weight: bold;
+    box-shadow: .1rem .1rem .8rem rgb(0, 0, 0);
+    cursor: pointer;
+    background: linear-gradient(to bottom right, rgba(22, 78, 7, 0.698), rgba(112, 4, 4, 0.664), rgba(224, 162, 62, 0.719));
+    transition: all .3s;
+}
+
+.heading-button:hover {
+    box-shadow: .1rem .1rem 1.3rem rgb(126, 58, 2);
+    transform: translate(0rem, -2rem) scale(1.5, 1.5);
+    padding: 1.6rem;
+}
+
+.heading-button:active {
+    transform: translate(0rem, .5rem) scale(1, 1);
+    box-shadow: .05rem .05rem 1rem rgb(240, 243, 39);
+    padding: 1rem;
+}
+
+/* species (Cards) */
+
+.species {
+    height: 100vh;
+}
+
+.species-title {
+    position: absolute;
+    color: rgb(207, 182, 134);
+    text-shadow: .1rem .3rem .6rem rgb(0, 0, 0);
+    background: linear-gradient(to bottom right, rgba(100, 61, 10, 0.465), rgba(40, 143, 79, 0.52), rgba(28, 23, 88, 0.534), rgba(236, 206, 34, 0.582));
+    border-radius: 1.5rem;
+    left: 47%;
+    top: 105%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: .5rem;
+    letter-spacing: .5rem;
+    font-size: 3rem;
+    box-shadow: .05rem -.05rem 3rem rgb(32, 1, 1);
+}
+
+/* cards */
+
+.species-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.species-card {
+    margin: 18rem;
+    width: 35rem;
+    height: 38rem;
+    box-shadow: .05rem -.3rem 1.5rem black;
+    background: linear-gradient(to right, rgba(107, 20, 12, 0.616), rgba(51, 107, 6, 0.561), rgba(72, 59, 185, 0.596));
+    transition: all .5s;
+}
+
+.species-card-picture {
+    margin-top: 1rem;
+    position: relative;
+    left: 7%;
+    width: 30rem;
+    background-size: cover;
+    box-shadow: .05rem .6rem 1rem black;
+}
+
+.species-card-title {
+    position: relative;
+    text-shadow: .05rem -.1rem 1rem rgb(0, 0, 0);
+    left: 25%;
+    letter-spacing: .3rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+.species .card-2 h1 {
+    left: 28%;
+}
+
+.species .card-3 h1 {
+    left: 29%;
+}
+
+.species-card-text {
+    position: relative;
+    padding: 0 1.7rem;
+    top: 5%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 1.5rem;
+    letter-spacing: .2rem;
+    text-shadow: .1rem -.05rem .5rem black;
+    text-align: center;
+    text-align-last: center;
+}
+
+.species-card:hover {
+    box-shadow: .05rem -.02rem 2rem black;
+    transform: translate(.4rem, -2rem) scale(1.2, 1.2);
+    background: linear-gradient(to bottom right, rgba(218, 178, 104, 0.596), rgba(172, 107, 4, 0.575),
+            rgba(77, 11, 5, 0.705))
+}
+
+/* extinct */
+
+.extinct {
+    height: 100vh;
+}
+
+.extinct-title {
+    position: absolute;
+    color: rgb(207, 182, 134);
+    text-shadow: .1rem .3rem .6rem rgb(0, 0, 0);
+    background: linear-gradient(to bottom right, rgba(100, 61, 10, 0.465), rgba(40, 143, 79, 0.52), rgba(28, 23, 88, 0.534), rgba(236, 206, 34, 0.582));
+    border-radius: 1.5rem;
+    left: 47%;
+    top: 285%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: .5rem;
+    letter-spacing: .5rem;
+    font-size: 3rem;
+    box-shadow: .05rem -.05rem 3rem rgb(32, 1, 1);
+}
+
+/* cards */
+
+.extinct-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.extinct-card {
+    margin-top: 93rem;
+    margin-bottom: 10rem;
+    position: relative;
+    width: 35rem;
+    height: 38rem;
+    box-shadow: .05rem -.3rem 1.5rem black;
+    background: linear-gradient(to right, rgba(107, 20, 12, 0.616), rgba(51, 107, 6, 0.561), rgba(72, 59, 185, 0.596));
+    transition: all .5s;
+}
+
+.extinct-card-picture {
+    margin-top: 1rem;
+    position: relative;
+    left: 7%;
+    width: 30rem;
+    background-size: cover;
+    box-shadow: .05rem .6rem 1rem black;
+}
+
+.extinct-card-title {
+    position: relative;
+    text-shadow: .05rem -.1rem 1rem rgb(0, 0, 0);
+    left: 25%;
+    letter-spacing: .3rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+.extinct-card-text {
+    position: relative;
+    padding: 0 1.7rem;
+    top: 5%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 1.5rem;
+    letter-spacing: .2rem;
+    text-shadow: .1rem -.05rem .5rem black;
+    text-align: center;
+    text-align-last: center;
+}
+
+.extinct-card:hover {
+    box-shadow: .05rem -.02rem 2rem black;
+    transform: translate(.4rem, -2rem) scale(1.2, 1.2);
+    background: linear-gradient(to bottom right, rgba(218, 178, 104, 0.596), rgba(172, 107, 4, 0.575),
+            rgba(77, 11, 5, 0.705))
+}
+
+/* places :p */
+
+.places {
+    height: 100vh;
+}
+
+.places-title {
+    position: absolute;
+    color: rgb(207, 182, 134);
+    text-shadow: .1rem .3rem .6rem rgb(0, 0, 0);
+    background: linear-gradient(to bottom right, rgba(100, 61, 10, 0.465), rgba(40, 143, 79, 0.52), rgba(28, 23, 88, 0.534), rgba(236, 206, 34, 0.582));
+    border-radius: 1.5rem;
+    left: 47%;
+    top: 390%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: .5rem;
+    letter-spacing: .5rem;
+    font-size: 3rem;
+    box-shadow: .05rem -.05rem 3rem rgb(32, 1, 1);
+}
+
+.places-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.places-card {
+    margin-top: 93rem;
+    margin-bottom: 15rem;
+    position: relative;
+    width: 35rem;
+    height: 66rem;
+    box-shadow: .05rem -.3rem 1.5rem black;
+    background: linear-gradient(to right, rgba(107, 20, 12, 0.616), rgba(51, 107, 6, 0.561), rgba(72, 59, 185, 0.596));
+    transition: all .5s;
+}
+
+.places-card-picture {
+    margin-top: 1rem;
+    position: relative;
+    left: 7%;
+    width: 30rem;
+    background-size: cover;
+    box-shadow: .05rem .6rem 1rem black;
+}
+
+.places-card-title {
+    position: relative;
+    text-shadow: .05rem -.1rem 1rem rgb(0, 0, 0);
+    left: 25%;
+    letter-spacing: .3rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+.places-card-text {
+    position: relative;
+    padding: 0 1.7rem;
+    top: 5%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 1.5rem;
+    letter-spacing: .2rem;
+    text-shadow: .1rem -.05rem .5rem black;
+    text-align: center;
+    text-align-last: center;
+}
+
+.places-card:hover {
+    box-shadow: .05rem -.02rem 2rem black;
+    transform: translate(.4rem, -2rem) scale(1.2, 1.2);
+    background: linear-gradient(to bottom right, rgba(218, 178, 104, 0.596), rgba(172, 107, 4, 0.575),
+            rgba(77, 11, 5, 0.705))
+}
+
+@media (max-width: 1500px) {
+    .heading-paragraph {
+        font-size: 2rem;
+        right: 0;
+        left: 0;
+    }
+
+    .heading-button {
+        top: 62%;
+        left: 50%;
+    }
+
+    .species-card {
+        width: 30rem;
+        height: 36rem;
+    }
+
+    .species-card-picture {
+        width: 26rem;
+    }
+}
+
+@media (max-width: 1350px) {
+    .species-card {
+        width: 25rem;
+        height: 35rem;
+    }
+
+    .species-card-picture {
+        width: 22rem;
+    }
+
+    .species-card-title {
+        left: 20%;
+    }
+
+    .species .card-2 h1 {
+        left: 20%;
+    }
+
+    .species .card-3 h1 {
+        left: 22%;
+    }
+
+
+
+    .extinct-card {
+        width: 25rem;
+        height: 35rem;
+    }
+
+    .extinct-card-picture {
+        width: 22rem;
+    }
+}
+
+@media (max-width: 1250px) {
+    .species-card {
+        width: 20rem;
+        height: 33rem;
+        margin: 10rem 15rem 5rem 15rem;
+    }
+
+    .species-card-title {
+        font-size: 1rem;
+    }
+
+    .species-card-picture {
+        width: 17rem;
+    }
+
+    .species-card-text {
+        font-size: 1rem;
+        text-shadow: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+    }
+
+    .extinct-title {
+        top: 240%;
+        padding: .5rem;
+    }
+
+    .extinct-card {
+        margin-top: 45rem;
+        width: 20rem;
+        height: 33rem;
+    }
+
+    .extinct-card-title {
+        font-size: 1rem;
+    }
+
+    .extinct-card-picture {
+        width: 17rem;
+    }
+
+    .extinct-card-text {
+        font-size: 1rem;
+        text-shadow: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+    }
+
+    .heading-paragraph {
+        padding: 0 30rem 0 40rem;
+        font-size: 1.5rem;
+    }
+
+    .heading-title {
+        left: 30%;
+    }
+
+    .heading-button {
+        top: 50%;
+    }
+
+    .places-title {
+        top: 320%;
+        padding: .5rem;
+    }
+
+    .places-card {
+        margin-top: 28rem;
+        width: 30rem;
+        height: 61rem;
+        margin-bottom: 10rem;
+    }
+
+    .places-card-picture {
+        width: 25rem;
+        left: 8%;
+    }
+
+    .places-card-title {
+        left: 25%;
+        font-size: 1.4rem;
+        font-weight: bold;
+    }
+
+    .places-card-text {
+        font-size: 1rem;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+    }
+}
+
+@media (max-width: 1000px) {
+    .heading-title {
+        font-size: 6rem;
+        left: 27%;
+    }
+
+    .heading-paragraph {
+        padding: 0 20rem 0 25rem;
+    }
+
+    .heading-button {
+        padding: .6rem;
+        left: 46%
+    }
+
+    .heading-button:hover {
+        box-shadow: .1rem .1rem 1rem rgb(126, 58, 2);
+        transform: translate(0rem, -1rem) scale(1, 1);
+        padding: 1rem;
+    }
+
+    .heading-button:active {
+        transform: translate(0rem, .3rem) scale(1, 1);
+        box-shadow: .05rem .05rem 1rem rgb(240, 243, 39);
+        padding: .5rem;
+    }
+
+    .species-title {
+        padding: .5rem;
+        font-size: 1.5rem;
+    }
+
+    .species-card {
+        width: 15rem;
+        height: 25rem;
+        margin: 8rem 10rem 3rem 10rem;
+    }
+
+    .species-card-title {
+        font-size: 1rem;
+        text-align: center;
+        left: 2.5%;
+    }
+
+    .species-card-picture {
+        width: 10rem;
+        left: 17%;
+    }
+
+    .species-card-text {
+        font-size: .8rem;
+        text-shadow: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        padding: 0;
+    }
+
+    .species .card-2 h1 {
+        left: 1%;
+    }
+
+    .species .card-3 h1 {
+        left: 1.4%;
+    }
+
+    
+    .extinct-title {
+        padding: .5rem;
+        font-size: 1.5rem;
+        top: 200%;
+    }
+
+    .extinct-card {
+        width: 15rem;
+        height: 27rem;
+        margin: 10rem 10rem 3rem 10rem;
+    }
+
+    .extinct-card-title {
+        font-size: 1rem;
+        text-align: center;
+        left: 2.5%;
+    }
+
+    .extinct-card-picture {
+        width: 10rem;
+        left: 17%;
+    }
+
+    .extinct-card-text {
+        font-size: .8rem;
+        text-shadow: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        padding: 0;
+    }
+
+    .places-title {
+        font-size: 1.5rem;
+        top: 285%;
+    }
+
+    .places-card {
+        margin: 0 5rem 10rem 5rem;
+        width: 29rem;
+        height: 55rem;
+    }
+
+    .places-card-picture {
+        width: 24rem;
+        left: 8.5%;
+    }
+
+    .places-card-title {
+        left: 26%;
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+    .places-card-text {
+        padding: 0;
+        font-size: .8rem;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+    }
+}
+
+@media (max-width: 780px) {
+    .header {
+        width: 100vh;
+        height: 100vh;
+    }
+
+    .heading-title {
+        font-size: 4rem;
+        left: 30%;
+        top: 16.5%;
+    }
+
+    .heading-paragraph {
+        padding: 0 13rem 0 18rem;
+    }
+
+    .heading-button {
+        padding: .5rem;
+        left: 44%
+    }
+
+    .species-title {
+        left: 45.5%;
+    }
+
+    .extinct-title {
+        left: 45.5%;
+    }
+
+    .extinct-card {
+        width: 15rem;
+        height: 27rem;
+        margin: 8rem 10rem 3rem 10rem;
+    }
+
+    .places-title {
+        font-size: 1.5rem;
+        top: 290%;
+        left: 45.5%;
+    }
+
+    .places-card {
+        margin: 0 2rem 10rem 2rem;
+        width: 25rem;
+        height: 51rem;
+    }
+
+    .places-card-picture {
+        width: 20rem;
+        left: 7%;
+    }
+
+    .places-card-title {
+        left: 26%;
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+    .places-card-text {
+        padding: 0;
+        font-size: .65rem;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+    }
+}
+
+@media (max-width: 700px) {
+    .species-cards {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        position: relative;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .species-title {
+        padding: .5rem;
+        top: 100%;
+        left: 43%;
+        font-size: 1.5rem;
+    }
+
+    .species-card {
+        width: 15rem;
+        height: 25rem;
+        margin: 8rem 10rem 3rem 10rem;
+        left: 50%;
+    }
+
+    .species-card-title {
+        font-size: 1rem;
+        text-align: center;
+        left: 2.5%;
+    }
+
+    .species-card-picture {
+        width: 10rem;
+        left: 17%;
+    }
+
+    .species-card-text {
+        font-size: .8rem;
+        text-shadow: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        padding: 0;
+    }
+
+    .extinct-title {
+        top: 280%;
+        left: 42.5%;
+    }
+
+    .extinct-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .extinct-card:nth-child(1) {
+        width: 15rem;
+        height: 27rem;
+        margin: 75rem 10rem 3rem 10rem;
+    }
+
+    .extinct-card {
+        width: 15rem;
+        height: 27rem;
+        margin: 3rem 10rem 3rem 10rem;
+    }
+    
+    .extinct-card-title {
+        font-size: 1rem;
+        text-align: center;
+        left: 2.5%;
+    }
+
+    .extinct-card-picture {
+        width: 10rem;
+        left: 17%;
+    }
+
+    .extinct-card-text {
+        font-size: .8rem;
+        text-shadow: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        padding: 0;
+    }
+
+    .places-title {
+        font-size: 1.5rem;
+        top: 395%;
+        left: 43.5%;
+    }
+
+    .places-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .places-card {
+        margin: 4rem 2rem 10rem 2rem;
+    }
+
+    .places-card:nth-child(1) {
+        margin: 90rem 2rem 10rem 2rem;
+        width: 25rem;
+        height: 51rem;
+    }
+
+    .places-card-picture {
+        width: 20rem;
+        left: 7%;
+    }
+
+    .places-card-title {
+        left: 26%;
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+    .places-card-text {
+        padding: 0;
+        font-size: .65rem;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+    }
+
+}
